@@ -13,12 +13,12 @@ class Feld {
     
     String getFieldSymbol() {
       
-      if( this.typ == 0) image(wa, this.zeile, this.spalte, width * gr / 100, height * gr / 100);
-      if( this.typ == 1) image(wa, this.zeile, this.spalte, width * gr / 100, height * gr / 100);
-      if( this.typ == 2) image(la, this.zeile, this.spalte, width * gr / 100, height * gr / 100);
-      if( this.typ == 3) image(la, this.zeile, this.spalte, width * gr / 100, height * gr / 100);
-      if( this.typ == 4) image(la, this.zeile, this.spalte, width * gr / 100, height * gr / 100);
-      if( this.typ == 5) image(mo, this.zeile, this.spalte, width * gr / 100, height * gr / 100);
+      if( this.typ == 0) image(wa, this.zeile, this.spalte, width * gr / multi, height * gr / multi);
+      if( this.typ == 1) image(wa, this.zeile, this.spalte, width * gr / multi, height * gr / multi);
+      if( this.typ == 2) image(la, this.zeile, this.spalte, width * gr / multi, height * gr / multi);
+      if( this.typ == 3) image(la, this.zeile, this.spalte, width * gr / multi, height * gr / multi);
+      if( this.typ == 4) image(la, this.zeile, this.spalte, width * gr / multi, height * gr / multi);
+      if( this.typ == 5) image(mo, this.zeile, this.spalte, width * gr / multi, height * gr / multi);
       return "0";
     }
     

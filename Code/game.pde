@@ -1,7 +1,10 @@
 PImage wa;
 PImage mo;
 PImage la;
-int gr = 2;
+int gr = 10;
+int bild = 10;    //sice / 1000
+int gro = gr * bild;
+final int multi = 100;     //größer = kleinere Bilder
 final int feldWidth = 10;
 final int feldHeight = 10;
 Feld [][] landkarte;
@@ -13,7 +16,7 @@ void setup () {
   
    pixelDensity(2);
   //water
-    size(5000,5000);
+    size(1000, 1000);     // anpassen für größe. bid beachten!
   wa = loadImage("water.png");
   //mountain
   mo = loadImage("mountain.png");
@@ -25,7 +28,7 @@ void setup () {
     for (int x=0; x<feldWidth; x++) {
       Name++;
       int z = int(random(0,6));
-      Feld neuesFeld = new Feld(x*50*gr, y*50*gr, Name, z);      
+      Feld neuesFeld = new Feld(x*gro, y*gro, Name, z);      
       landkarte[y][x] = neuesFeld;
       
     }
