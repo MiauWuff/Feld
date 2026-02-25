@@ -1,30 +1,22 @@
-/**
- * Background Image. 
- * 
- * This example presents the fastest way to load a background image
- * into Processing. To load an image as the background, it must be
- * the same width and height as the program.
- */
-
-PImage bg;
-int y;
-
+PImage wa;
+PImage mo;
+PImage la;
+float gr = 0.1;
 void setup() {
-  size(640, 360);
-  // The background image must be the same size as the parameters
-  // into the size() method. In this program, the size of the image
-  // is 640 x 360 pixels.
-  bg = loadImage("moonwalk.jpg");
+  pixelDensity(2);
+  //water
+    size(5000,5000);
+  wa = loadImage("water.png");
+  //mountain
+  mo = loadImage("mountain.png");
+  //land
+  la = loadImage("land.png");
 }
 
 void draw() {
-  background(bg);
+  image(wa, 0, 0, width * gr, height * gr); //Bild platzieren
+  image(mo, 500, 0, width * gr, height * gr); //Bild platzieren
+  image(la, 1000, 0, width * gr, height * gr); //Bild platzieren
 
-  stroke(226, 204, 0);
-  line(0, y, width, y);
-
-  y++;
-  if (y > height) {
-    y = 0;
-  }
+  
 }
